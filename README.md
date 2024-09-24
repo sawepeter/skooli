@@ -1,4 +1,4 @@
-# Scholaro pre-school Management Dashboard
+# Skooli is a pre-school Management Dashboard
 
 ## Getting Started
 

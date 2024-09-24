@@ -13,6 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        scholaroSky: "#C3EBFA",
+        scholaroSkyLight: "#EDF9FD",
+        scholaroPurple: "#CFCEFF",
+        scholaroPurpleLight: "#F1F0FF",
+        scholaroYellow: "#FAE27C",
+        scholaroYellowLight: "#FEFCE8"
+      },
     },
   },
   plugins: [],
