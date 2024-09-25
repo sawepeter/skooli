@@ -16,12 +16,12 @@ import {
     },
     {
       name: "Girls",
-      count: 53,
+      count: 70,
       fill: "#FAE27C",
     },
     {
       name: "Boys",
-      count: 53,
+      count: 36,
       fill: "#C3EBFA",
     },
   ];
