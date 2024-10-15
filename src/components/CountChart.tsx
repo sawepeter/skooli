@@ -1,6 +1,5 @@
 "use client";
 import Image from 'next/image';
-import React from 'react'
 import {
     RadialBarChart,
     RadialBar,
@@ -47,13 +46,13 @@ const CountChart = () => {
         <div className="flex justify-center gap-16">
             <div className="flex flex-col gap-1">
                 <div className="w-5 h-5 bg-lamaSky rounded-full" />
-                <h1 className='font-bold'>700</h1>
-                <h2 className='text-xs text-gray-300'>Boys (55%)</h2>
+                <h1 className='font-bold'>36</h1>
+                <h2 className='text-xs text-gray-300'>Boys (34%)</h2>
             </div>
             <div className='flex flex-col gap-1'>
                 <div className='w-5 h-5 bg-lamaYellow rounded-full'/>
-                <h1 className='font-bold'>700</h1>
-                <h2 className='text-xs text-gray-300'>Girls (45%)</h2>
+                <h1 className='font-bold'>70</h1>
+                <h2 className='text-xs text-gray-300'>Girls (66%)</h2>
             </div>
         </div>
     </div>
