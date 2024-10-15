@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import Image from 'next/image';
+import "react-calendar/dist/Calendar.css";
 
 type ValuePiece = Date | null;
 
@@ -18,8 +19,7 @@ const events = [
         description: "Prizing giving day to be attended by all parents to witness top achievers awarding",
     },
     {
-        id: 2,
-        title: "BOM board and Grade 4 parents",
+        title: "BOM Meeting",
         time: "9:00 AM - 14:00 PM",
         descriptions: "discuss upcoming term activities",
     },
