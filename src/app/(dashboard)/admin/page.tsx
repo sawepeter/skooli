@@ -1,9 +1,9 @@
 import Announcements from "@/components/Announcements";
-import AttendanceChart from "@/components/AttendanceChart"
-import CountChart from "@/components/CountChart"
+import AttendanceChart from "@/components/AttendanceChart";
+import CountChart from "@/components/CountChart";
 import EventCalendar from "@/components/EventCalendar";
 import FinanceChart from "@/components/FinanceChart";
-import UserCard from "@/components/UserCard"
+import UserCard from "@/components/UserCard";
 
 const AdminPage = () => {
     return (
@@ -15,7 +15,7 @@ const AdminPage = () => {
                 <UserCard type="students"/>
                 <UserCard type="teachers"/>
                 <UserCard type="staff"/>
-                <UserCard type="admin"/>
+                <UserCard type="parents"/>
             </div>
             {/* MIDDLE CHARTS */}
             <div className="flex gap-4 flex-col lg:flex-row">

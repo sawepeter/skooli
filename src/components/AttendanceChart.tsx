@@ -1,6 +1,5 @@
 "use client";
 import Image from 'next/image';
-import React from 'react'
 import {
     BarChart,
     Bar,
@@ -57,7 +56,7 @@ const AttendanceChart = () => {
                 <Tooltip contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }} />
                 <Legend align="left" verticalAlign="top" wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }} />
                 <Bar dataKey="present" fill="#FAE27C" legendType="circle" radius={[10,10,0,0]} />
-                <Bar dataKey="absent" fill="#C#EBFA" legendType="circle" radius={[10, 10, 0, 0]} />
+                <Bar dataKey="absent" fill="#C3EBFA" legendType="circle" radius={[10, 10, 0, 0]} />
             </BarChart>
         </ResponsiveContainer>
     </div>
