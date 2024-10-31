@@ -85,7 +85,7 @@ const AssignmentListPage = () => {
         {/* PAGINATION */}
         <Pagination />
     </div>
-  )
-}
+  );
+};
 
 export default AssignmentListPage;

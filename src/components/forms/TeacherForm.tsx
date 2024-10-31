@@ -1,9 +1,9 @@
 import React from 'react';
 import InputField from '../InputField';
-import { register } from 'module';
 import Image from 'next/image';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
+
 
 const schema = z.object({
     username: z.string().min(3, {message: "Username must be at least 3 characters long!" })
@@ -15,6 +15,7 @@ const schema = z.object({
     phone: z.string().min(1, {message: "Phone is required!" }),
     address: z.string().min(1, {message: "Address is required!" }),
     bloodType: z.string().min(1, {message: "Blood Type is required!" }),
+    birthday: z.date({ message: "Birthday is required!"}),
     sex: z.enum(["male", "female"], {message: "Sex is required!" }),
     img: z.instanceof(File, {message: "Image is required" }),
 });
@@ -41,7 +42,7 @@ const TeacherForm = ({
     });
     
   return (
-    <form action="" className='flex flex-col gap-8' onSubmit={onsubmit}>
+    <form className="flex flex-col gap-8" onSubmit={onSubmit}>
         <h1 className='text-xl font-semibold'>Create a new teacher</h1>
         <span className='text-xs text-gray-400 font-medium'>Authentication Information</span>
         <div className='flex justify-between flex-wrap gap-4'>
@@ -93,3 +94,7 @@ const TeacherForm = ({
 };
 
 export default TeacherForm;
+
+function zodResolver(schema: z.ZodObject<{ username: z.ZodString; email: z.ZodString; password: z.ZodString; firstName: z.ZodString; lastName: z.ZodString; phone: z.ZodString; address: z.ZodString; bloodType: z.ZodString; birthday: z.ZodDate; sex: z.ZodEnum<["male", "female"]>; img: z.ZodType<File, z.ZodTypeDef, File>; }, "strip", z.ZodTypeAny, { username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }, { username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }>): import("react-hook-form").Resolver<{ username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }, any> | undefined {
+    throw new Error('Function not implemented.');
+}
