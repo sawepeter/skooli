@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import InputField from '../InputField';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
-
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
     username: z
@@ -165,7 +165,5 @@ const StudentForm = ({
 
 export default StudentForm;
 
-function zodResolver(schema: z.ZodObject<{ username: z.ZodString; email: z.ZodString; password: z.ZodString; firstName: z.ZodString; lastName: z.ZodString; phone: z.ZodString; address: z.ZodString; bloodType: z.ZodString; birthday: z.ZodDate; sex: z.ZodEnum<["male", "female"]>; img: z.ZodType<File, z.ZodTypeDef, File>; }, "strip", z.ZodTypeAny, { phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }, { phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }>): import("react-hook-form").Resolver<{ phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }, any> | undefined {
-  throw new Error('Function not implemented.');
-}
+
 

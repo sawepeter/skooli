@@ -64,7 +64,7 @@ const SingleTeacherPage = () => {
                             <Image src="/phone.png" alt='' width={14} height={14} />
                             <span>+1 234 567</span>
                     </div>
-                    </div>
+                  </div>
                 </div>
             </div>
             {/* SMALL CARDS */}
