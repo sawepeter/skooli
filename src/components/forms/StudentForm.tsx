@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import InputField from '../InputField';
 import { z } from 'zod';
@@ -128,8 +130,7 @@ const StudentForm = ({
         <select
           className="ring-[1.5px] ring-gray-300 p-2 rounded-md text-sm w-full"
           {...register("sex")}
-          defaultValue={data?.sex}
-        >
+          defaultValue={data?.sex}>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
