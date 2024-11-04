@@ -40,9 +40,12 @@ const StudentForm = ({
     } = useForm<Inputs>({
       resolver: zodResolver(schema),
   }); 
+
     const onSubmit = handleSubmit((data) => {
         console.log(data);
       });
+
+
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
     <h1 className="text-xl font-semibold">Create a new student</h1>
@@ -139,11 +142,12 @@ const StudentForm = ({
       <div className="flex flex-col gap-2 w-full md:w-1/4 justify-center">
         <label
           className="text-xs text-gray-500 flex items-center gap-2 cursor-pointer"
-          htmlFor="img"
-        >
+          htmlFor="img">
+
           <Image src="/upload.png" alt="" width={28} height={28} />
           <span>Upload a photo</span>
         </label>
+
         <input type="file" id="img" {...register("img")} className="hidden" />
         {errors.img?.message && (
           <p className="text-xs text-red-400">
@@ -159,8 +163,9 @@ const StudentForm = ({
   )
 }
 
-export default StudentForm
+export default StudentForm;
 
-function zodResolver(schema: z.ZodObject<{ username: z.ZodString; email: z.ZodString; password: z.ZodString; firstName: z.ZodString; lastName: z.ZodString; phone: z.ZodString; address: z.ZodString; bloodType: z.ZodString; birthday: z.ZodDate; sex: z.ZodEnum<["male", "female"]>; img: z.ZodType<File, z.ZodTypeDef, File>; }, "strip", z.ZodTypeAny, { username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }, { username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }>): import("react-hook-form").Resolver<{ username: string; email: string; password: string; firstName: string; lastName: string; phone: string; address: string; bloodType: string; birthday: Date; sex: "male" | "female"; img: File; }, any> | undefined {
-    throw new Error('Function not implemented.');
+function zodResolver(schema: z.ZodObject<{ username: z.ZodString; email: z.ZodString; password: z.ZodString; firstName: z.ZodString; lastName: z.ZodString; phone: z.ZodString; address: z.ZodString; bloodType: z.ZodString; birthday: z.ZodDate; sex: z.ZodEnum<["male", "female"]>; img: z.ZodType<File, z.ZodTypeDef, File>; }, "strip", z.ZodTypeAny, { phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }, { phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }>): import("react-hook-form").Resolver<{ phone: string; address: string; img: File; username: string; email: string; password: string; firstName: string; lastName: string; bloodType: string; birthday: Date; sex: "male" | "female"; }, any> | undefined {
+  throw new Error('Function not implemented.');
 }
+
