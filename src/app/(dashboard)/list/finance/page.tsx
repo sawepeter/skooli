@@ -16,8 +16,34 @@ const FinanceListPage = () => {
 
                 </div>
 
-            </div>
+                {/* Date Picker */}
+                <div className='relative'>
+                    <button className='flex items-center px-4 py-2 bg-white border rounded-md border-gray-300'>
+                        Today
+                    </button>
                 </div>
+
+                {/* Class Filter */}
+                <div className='relative'>
+                    <select className='px-4 py-2 bg-white border rounded-md border-gray-300 text-gray-600 focus:outline-none'>
+                        <option>All Classes</option>
+                        <option>Class 9</option>
+                        <option>Class 10</option>
+                        <option>Class 11</option>
+                    </select>
+                </div>
+
+                {/* Status Filter */}
+                <div className='relative'>
+                    <select className='px-4 py-2 bg-white border rounded-md border-gray-300 text-gray-600 focus:outline-none'>
+                        <option>All Status</option>
+                        <option>Paid</option>
+                        <option>Pending</option>
+                        <option>Overdue</option>
+                    </select>
+                </div>
+            </div>
+         </div>
 
                 {/* Summary Cards */}
                 <div className='grid grid-cols-4 gap-4 mb-8'>
@@ -70,7 +96,9 @@ const FinanceListPage = () => {
                                         <span className={`p-1 px-2 rounded-full text-white ${student.color}`}>{student.status}</span>
                                     </td>
                                     <td className='p-2 space-x-2'>
-                                        <button className='text-blue-500'>Edit</button>
+                                        <button className='text-blue-500'>
+                                           Edit
+                                        </button>
                                         <button className='text-red-500'>Delete</button>
                                     </td>
                                 </tr>
