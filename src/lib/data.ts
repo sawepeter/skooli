@@ -1045,19 +1045,19 @@ export const calendarEvents = [
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 10, 30, 11, 0),
-    end: new Date(2024, 10, 30, 11, 45),
+    start: new Date(2024, 11, 5, 18, 0),
+    end: new Date(2024, 11, 5, 18, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 10, 30, 13, 0),
-    end: new Date(2024, 10, 30, 13, 45),
+    start: new Date(2024, 11, 5, 17, 0),
+    end: new Date(2024, 11, 5, 17, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 10, 31, 14, 0),
-    end: new Date(2024, 10, 31, 14, 45),
+    start: new Date(2024, 11, 5, 16, 21),
+    end: new Date(2024, 11, 5, 17, 10),
   },
 ];

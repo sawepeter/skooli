@@ -161,8 +161,8 @@ const StudentForm = ({
       {type === "create" ? "Create" : "Update"}
     </button>
   </form>
-  )
-}
+  );
+};
 
 export default StudentForm;
 
