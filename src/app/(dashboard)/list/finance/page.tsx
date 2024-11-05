@@ -5,7 +5,18 @@ const FinanceListPage = () => {
   return (
     <div className='min-h-screen p-8 bg-gray-100'>
         <div className='flex items-center justify-between mb-8'>
+            {/* Title */}
             <h1 className='text-3xl font-semibold'>Fees Collection</h1>
+
+            {/* Search and Filters */}
+            <div className='flex items-center space-x-4'>
+                {/* Search Input */}
+                <div className='relative'>
+                    <input type="text" placeholder='Search by Name or ID'  className='p-2 pl-10 w-64 border rounded-md border-gray-300 focus:outline-none' />
+
+                </div>
+
+            </div>
                 </div>
 
                 {/* Summary Cards */}
