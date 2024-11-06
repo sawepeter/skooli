@@ -1,3 +1,5 @@
+import CountChart from '@/components/CountChart';
+import FinanceChart from '@/components/FinanceChart';
 import Image from 'next/image';
 import React from 'react';
 
@@ -45,21 +47,46 @@ const FinanceListPage = () => {
             </div>
          </div>
 
-                {/* Summary Cards */}
-                <div className='grid grid-cols-4 gap-4 mb-8'>
-                    {[
-                        { title: "Total Amount", amount: "$126,450", change: "+15%", color: "text-green-500" },
-                        { title: "Total Tuition", amount: "$67,200", change: "+15%", color: "text-green-500" },
-                        { title: "Total Activities", amount: "$8,000", change: "-8%", color: "text-red-500" },
-                        { title: "Total Miscellaneous", amount: "$6,150", change: "-8%", color: "text-red-500" },
-                    ].map((card, index) => (
-                        <div key={index} className='p-6 bg-white rounded-lg shadow-md'>
-                            <h2 className='text-gray-500 text-lg'>{card.title}</h2>
-                            <p className='text-2xl font-semibold'>{card.amount}</p>
-                            <span className={`text-sm ${card.color}`}>{card.change}</span>
-                        </div>
-                    ))}
+               
+                <div className="flex gap-4 flex-col lg:flex-row">
+                     {/* Finance CHART */}
+                <div className="w-full lg:w-2/3 h-[450px]">
+                 <FinanceChart />
                 </div>
+                {/* Summary Cards */}
+                
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6'>
+                   
+                           {/*Card 1 */} 
+                  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                      <h2 className="text-xl font-semibold text-gray-800 mb-2">Card Title 1</h2>
+                      <p className="text-gray-600">This is a description for card 1.</p>
+                      <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+                  </div>
+
+                  {/*Card 2 */}
+                  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                      <h2 className="text-xl font-semibold text-gray-800 mb-2">Card Title 2</h2>
+                      <p className="text-gray-600">This is a description for card 2.</p>
+                      <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+                  </div>
+
+                  {/*Card 3 */}
+                  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                      <h2 className="text-xl font-semibold text-gray-800 mb-2">Card Title 3</h2>
+                      <p className="text-gray-600">This is a description for card 3.</p>
+                      <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+                  </div>
+
+                  {/*Card 4 */}
+                  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                      <h2 className="text-xl font-semibold text-gray-800 mb-2">Card Title 4</h2>
+                      <p className="text-gray-600">This is a description for card 4.</p>
+                      <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+                  </div>
+                </div>
+            </div>
+            
 
                 {/* Fee Collection Table */}
                 <div className='bg-white rounded-lg shadow-md p-4'>

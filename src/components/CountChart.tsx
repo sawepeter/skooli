@@ -17,18 +17,18 @@ import {
     {
       name: "Girls",
       count: 70,
-      fill: "#FAE27C",
+      fill: "#00796B",
     },
     {
       name: "Boys",
       count: 36,
-      fill: "#C3EBFA",
+      fill: "#FFC107",
     },
   ];
 
 const CountChart = () => {
   return (
-    <div className="bg-skooliBackground rounded-xl w-full h-full p-4">
+    <div className="bg-white rounded-xl w-full h-full p-4">
         {/* TITLE */}
         <div className='flex justify-between items-center'>
             <h1 className='text-lg font-semibold'>Students</h1>
@@ -41,7 +41,7 @@ const CountChart = () => {
                     <RadialBar background dataKey="count" />
                 </RadialBarChart>
             </ResponsiveContainer>
-            <Image src="/maleFemale.png" alt="" width={50} height={50} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+            <Image src="/malfemale.png" alt="" width={50} height={50} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
         {/* BOTTOM */}
         <div className="flex justify-center gap-16">

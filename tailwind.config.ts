@@ -28,6 +28,7 @@ const config: Config = {
         pending: "#FFA940",
         overdue: "#FF4D4F",
         skooliWhite: "#FFFFFF",
+        skooliHighlight: "#effcf5",
       },
     },
   },
