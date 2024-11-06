@@ -1,4 +1,5 @@
 "use client";
+
 import Image from 'next/image';
 import {
     RadialBarChart,
@@ -16,12 +17,12 @@ import {
     {
       name: "Girls",
       count: 70,
-      fill: "#FAE27C",
+      fill: "#00796B",
     },
     {
       name: "Boys",
       count: 36,
-      fill: "#C3EBFA",
+      fill: "#FFC107",
     },
   ];
 
@@ -40,17 +41,17 @@ const CountChart = () => {
                     <RadialBar background dataKey="count" />
                 </RadialBarChart>
             </ResponsiveContainer>
-            <Image src="/maleFemale.png" alt="" width={50} height={50} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+            <Image src="/malfemale.png" alt="" width={50} height={50} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
         {/* BOTTOM */}
         <div className="flex justify-center gap-16">
             <div className="flex flex-col gap-1">
-                <div className="w-5 h-5 bg-lamaSky rounded-full" />
+                <div className="w-5 h-5 bg-skooliYellow rounded-full" />
                 <h1 className='font-bold'>36</h1>
                 <h2 className='text-xs text-gray-300'>Boys (34%)</h2>
             </div>
             <div className='flex flex-col gap-1'>
-                <div className='w-5 h-5 bg-lamaYellow rounded-full'/>
+                <div className='w-5 h-5 bg-skooliPurple rounded-full'/>
                 <h1 className='font-bold'>70</h1>
                 <h2 className='text-xs text-gray-300'>Girls (66%)</h2>
             </div>
