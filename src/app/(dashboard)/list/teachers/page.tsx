@@ -3,6 +3,7 @@ import Pagination from '@/components/Pagination';
 import Table from '@/components/Table';
 import TableSearch from '@/components/TableSearch';
 import { role, teachersData } from '@/lib/data';
+import { count } from 'console';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -94,8 +95,11 @@ const TeacherListPage = () => {
         <div className='flex flex-col md:flex-row items-center gap-4 w-full md:w-auto'>
             <TableSearch />
         <div className='flex items-center gap-4 self-end'>
-            <button className='w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow'>
+            <button className='w-8 h-8 flex items-center justify-center rounded-full bg-skooliYellow'>
                 <Image src="/filter.png" alt='' width={14} height={14} />
+            </button>
+            <button className='w-8 h-8 flex items-center justify-center rounded-full bg-skooliYellow'>
+                <Image src="/sort.png" alt='' width={14} height={14} />
             </button>
             {role === "admin" && (
                 <FormModal table='teacher' type='create' />
@@ -106,7 +110,7 @@ const TeacherListPage = () => {
         {/* List */}
         <Table columns={columns} renderRow={renderRow} data={teachersData} />
         {/* Pagination */}
-        <Pagination />
+        <Pagination page={p} count={count}/>
     </div>
   );
 };
