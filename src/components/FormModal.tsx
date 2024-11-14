@@ -3,6 +3,22 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import { deleteSubject } from '@/lib/action';
+
+const deleteActionMap = {
+    subject: deleteSubject,
+    class: deleteClass,
+    teacher: deleteTeacher,
+    student: deleteStudent,
+    exam: deleteExam,
+    parent: deleteSubject,
+    lesson: deleteSubject,
+    assignment: deleteSubject,
+    result: deleteSubject,
+    attendance: deleteSubject,
+    event: deleteSubject,
+    announcement: deleteSubject,
+};
 
 const TeacherForm = dynamic(() => import("./forms/TeacherForm"), {
     loading: () => <h1>Loading...</h1>,
