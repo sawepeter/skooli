@@ -52,7 +52,7 @@ const ClassForm = ({
         }
     }, [state, router, type, setOpen]);
 
-    const { teachers, grade } = relatedData;
+    const { teachers, grades } = relatedData;
 
     return (
         <form className="flex flex-col gap-8" onSubmit={onSubmit}>
@@ -64,7 +64,7 @@ const ClassForm = ({
                 <InputField label="Class name" name="name" defaultValue={data?.name} register={register} error={errors?.name} />
                 <InputField label="Capacity" name="capacity" defaultValue={data?.capacity} register={register} error={errors?.capacity} />
                 {data && (
-                    <InputField label="Id" name="id" defaultValue={data?.id} register={register} error={errors?.id} hidden />
+                    <InputField label="Id" name="id" defaultValue={data?.id} register={register} error={errors?.id}/>
                 )}
 
                 <div className="flex flex-col gap-2 w-full md:w-1/4">
