@@ -1,6 +1,7 @@
 import prisma from '@/lib/prisma';
 import { auth } from '@clerk/nextjs/server';
 import React from 'react';
+import FormModal from './FormModal';
 
 export type FormContainerProps = {
     table:
@@ -24,7 +25,7 @@ export type FormContainerProps = {
 const FormContainer = async ({ table, type, data, id }: FormContainerProps) => {
     let relatedData = {};
 
-    const { userId, sessionClaims} = auth();
+    const { userId, sessionClaims} = await auth();
     const role = (sessionClaims?.metadata as {role?: string })?.role;
     const currentUserId = userId;
 
@@ -74,9 +75,12 @@ const FormContainer = async ({ table, type, data, id }: FormContainerProps) => {
                 break;
         }
     }
+
   return (
-    <div>FormContainer</div>
-  )
-}
+    <div className=''>
+        <FormModal table={table} type={type} data={data} id={id} relatedData={relatedData} />
+    </div>
+  );
+};
 
 export default FormContainer;
