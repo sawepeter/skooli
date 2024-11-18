@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { Pie, PieChart, ResponsiveContainer } from 'recharts';
+
 const data = [
     {name: "Group A", value: 92, fill: "#C3EBFA" },
     {name: "Group B", value: 8, fill: "#FAE27C"},

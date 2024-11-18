@@ -1,6 +1,16 @@
-import Image from 'next/image'
+import prisma from '@/lib/prisma';
+import Image from 'next/image';
 
-const UserCard = ({ type }: { type: string }) => {
+const UserCard = async ({ type }: { type: "admin" | "teacher" | "student" | "parent"; }) => {
+  const modelMap: Record<typeof type, any> = {
+    admin: prisma.admin,
+    teacher: prisma.teacher,
+    student: prisma.student,
+    parent: prisma.parent,
+  };
+
+  const data = await modelMap[type].count();
+
   return (
     <div className='rounded-2xl odd:bg-skooliBackground even:bg-skooliBackground p-4 flex-1 min-w-[130px]'>
         <div className='flex justify-between items-center'>

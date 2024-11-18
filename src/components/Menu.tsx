@@ -1,4 +1,5 @@
 import { role } from '@/lib/data';
+import { currentUser } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -126,7 +127,9 @@ const menuItems = [
 
 
 
-const Menu = () => {
+const Menu = async () => {
+  const user = await currentUser();
+  const role = user?.publicMetadata.role as string;
   return (
     <div className='mt-4 text-sm'>
       {menuItems.map((i) => (
@@ -140,7 +143,7 @@ const Menu = () => {
                 <Link
                   href={item.href}
                   key={item.label}
-                  className='flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-lamaSkyLight'>
+                  className='flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-skooliBlueLight'>
 
                     <Image src={item.icon} alt='' width={20} height={20} />
                     <span className='hidden lg:block'>{item.label}</span>
@@ -151,7 +154,6 @@ const Menu = () => {
 
         </div>
       ))}
-
     </div>
   );
 };
